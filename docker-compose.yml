@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  bof-ctf:
+    build: .
+    ports:
+      - "9999:9999"
+    environment:
+
+      FLAG: "practice{b0f_3xpl01t_5ucc3ss}"

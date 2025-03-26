@@ -1,0 +1,15 @@
+service ctf
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = ctf
+    type        = UNLISTED
+    port        = 9999
+    bind        = 0.0.0.0
+    server      = /home/ctf/vulnerable_echo_server
+    log_type    = FILE /var/log/ctf.log
+    log_on_success  += PID HOST EXIT
+    log_on_failure  += HOST
+}
