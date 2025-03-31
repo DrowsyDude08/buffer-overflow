@@ -15,7 +15,7 @@ void vulnerable_echo() {
 void secret_function() {
     const char *flag = getenv("FLAG");
     if (!flag) {
-        flag = "practice{default_flag}";
+        flag = "Error: FLAG environment variable is not set!";
     }
     std::cout << "Congratulations! Here's your flag: " << flag << std::endl;
     exit(0);
