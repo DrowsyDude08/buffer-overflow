@@ -15,8 +15,8 @@ RUN g++ -fno-stack-protector -z execstack -no-pie vulnerable_echo_server.cpp -o 
 COPY ctf.xinetd /etc/xinetd.d/ctf
 COPY start.sh .
 
-RUN chmod +x start.sh
+RUN sed -i 's/\r$//' start.sh && chmod +x start.sh
 
-EXPOSE 9999
+EXPOSE 1337
 
 CMD ["./start.sh"]

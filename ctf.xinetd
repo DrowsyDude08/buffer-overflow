@@ -6,7 +6,7 @@ service ctf
     wait        = no
     user        = ctf
     type        = UNLISTED
-    port        = 9999
+    port        = 1337
     bind        = 0.0.0.0
     server      = /home/ctf/vulnerable_echo_server
     log_type    = FILE /var/log/ctf.log
